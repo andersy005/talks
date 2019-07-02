@@ -164,24 +164,24 @@ _Note_: The cluster object stores essentially a configuration for a block of wor
 
 
 
-### Interactivity Tools: Dask's adaptive scaling
+### Interactivity Tools: Adaptive scaling
 
 _Challenges:_ 
 - Balancing cluster resources and performance can be challenging, and requires a lot of experimentation...
 - Computational workloads aren't constant, they rather fluctuate throughout the analysis...
 
 
-### Interactivity Tools: Dask's adaptive scaling
+### Interactivity Tools: Adaptive scaling
 
 _Solutions:_
 - Start your Jupyter Notebook, instantiate your dask cluster, and then do science...
 - Let dask determine when to scale up and/or down depending on the commputational workload...
 
 
-### Interactivity Tools: Dask's adaptive scaling & resilience
+### Interactivity Tools: Adaptive scaling & Resilience
 
 _Benefits:_
-- Adaptive scaling improves HPC systems' occupancy / utilization...
+- Dask's adaptive scaling improves HPC systems' occupancy / utilization...
 - Dask’s resilience against the death of all or part of its workers provides new ways of leveraging job preemption...
 
 
@@ -191,11 +191,12 @@ _Benefits:_
  
 ### Questions? Thoughts?
 
+- [Dask-jobqueue workshop materials](https://github.com/willirath/dask_jobqueue_workshop_materials)
 - https://dask.pydata.org/
 - https://jobqueue.dask.org/
 - https://distributed.dask.org/
 - https://github.com/jupyterhub
-- Jupyter for Science User Facilities and High Performance Computing: https://jupyter-workshop-2019.lbl.gov/agenda
+- [Jupyter for Science User Facilities and High Performance Computing workshop](https://jupyter-workshop-2019.lbl.gov/agenda)
 
 **Participate**
 
