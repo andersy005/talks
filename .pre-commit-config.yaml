@@ -4,8 +4,3 @@ repos:
     hooks:
       - id: end-of-file-fixer
       - id: double-quote-string-fixer
-
-  - repo: https://github.com/prettier/prettier
-    rev: 1.18.2
-    hooks:
-      - id: prettier

@@ -7,13 +7,18 @@ _Anderson Banihirwe, Software Engineer_
 
 National Center for Atmospheric Research
 
+
+
 ### Motivation
 
 - _Context:_ Scientists iterate rapidyly searching for insight as they analyze critical, large datasets.
 - _Problem:_ High Performance Computing (HPC) systems are a bit hard to use with anything other than MPI.
 - _Goal:_ Support interactive analytics on HPC systems as a first class service.
 
+
+
 ### Jupyter on HPC systems
+
 
 **Commonly, inconvenient used setup:**
 
@@ -41,22 +46,30 @@ $ ssh -N -L <port>:<hostname>:<port> <remote_user>@<remote_host>
 $ open http://localhost:<port>/
 ```
 
+
+
 ### JupyterHub to rescue
 
 - Provide a general-purpose point-of-entry to interactive high performance computing services.
 - Centralized service to deploy notebooks in a standard authenticated manner.
 
+
+
 ### JupyterHub @ NCAR: Login
 
 <img src="images/jhub-ncar/login.png" width="100%">
+
 
 ### JupyterHub @ NCAR: Specifying Job Configuration
 
 <img src="images/jhub-ncar/job.png" width="100%">
 
+
 ### JupyterHub @ NCAR: A Running Jupyter Server
 
 <img src="images/jhub-ncar/launcher.png" width="80%">
+
+
 
 ### The solution: Dask on HPC Machines
 
@@ -77,6 +90,8 @@ $ open http://localhost:<port>/
 
 * Dask-jobqueue gives users the ability to interactively scale workloads across large HPC systems; turning an interactive Jupyter Notebook into a powerful tool for scalable computation on very large datasets.
 
+
+
 ### Dask-Jobqueue Setup
 
 ```python
@@ -93,6 +108,7 @@ print(cluster)
 PBSCluster(cores=0, memory=0 B, workers=0/0, jobs=0/0)
 ```
 
+
 ### Dask-jobqueue Setup
 
 ```python
@@ -101,6 +117,7 @@ cluster = SLURMCluster(project=..., queue=..., cores=1,
                        processes=1, memory="20GB",
                        walltime="00:30:00")
 ```
+
 
 ### Dask-jobqueue Setup
 
@@ -111,9 +128,12 @@ cluster = SGECluster(project=..., queue=..., cores=1,
                      walltime="00:30:00")
 ```
 
+
+
 ### Scaling
 
 - Scale cluster to n dask workers
+
 
 ### Scaling: Manual
 
@@ -121,11 +141,14 @@ cluster = SGECluster(project=..., queue=..., cores=1,
 cluster.scale(10)
 ```
 
+
 ### Scaling: Adaptive Scaling based on load
 
 ```python
 cluster.adapt(minimum=1, maximum=100, wait_count=60)
 ```
+
+
 
 ### Advantages of adaptive scaling
 
