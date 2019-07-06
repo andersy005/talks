@@ -1,4 +1,4 @@
-## Turning HPC Systems into Interactive Data Analysis Platforms using Jupyter and Dask
+## Interactive Supercomputing with Jupyter and Dask
 
 <img src="images/scipy-stack/jupyter_logo_white.svg" width="30%">
 <img src="images/scipy-stack/dask_horizontal_white.svg" width="30%">
@@ -7,82 +7,135 @@ _Anderson Banihirwe, Software Engineer_
 
 National Center for Atmospheric Research (NCAR)
 
-
-
-### Motivation: Context
-
-- Pressing need and opportunity for interactivity in supercomputing, both in data science and traditional applications, e.g.;
-  - Data exploration 
-  - Workflow experimentation  
-  - Visualization  
-
-
-### Motivation: Problem
-
-- Batch job submission to a job queue means many slow iteration cycles for the users.
-- HPC systems are a bit hard to use with anything other than MPI.
-
-
-### Motivation: Goal
-
-- Support interactive analytics on HPC systems as a first class service with **dask-jobqueue** and **jupyter**. 
+<font size="4">SciPy 2019, Austin, TX.</font > 
 
 
 
-### What is Interactive Supercomputing?
-
-A more user friendly/centered way of using supercomputers:
-
-- Interact with the job while it is running, rather than submitting to a batch queue and checking back the next day. <!-- .element: class="fragment" data-fragment-index="1" -->
-- Often involves a modern UI/UX. <!-- .element: class="fragment" data-fragment-index="2" -->
-- Scaling: computing resources should scale adaptively based on the workload. <!-- .element: class="fragment" data-fragment-index="3" -->
-- Responsiveness: short jobs or tasks should start, complete, and return control to the user quickly. <!-- .element: class="fragment" data-fragment-index="4" -->
+### What do we mean by supercomputing?
 
 
+**WHAT DO WE MEAN BY SUPERCOMPUTING?**
+<hr>
 
-### Why is Interactivity Needed for Data Analysis?
+- MPI, batch processing...
+- Lots of heavy machines managed by sysadmins...
+  
+<font size="4">Cheyenne is a 5.34-petaflops, high-performance computer operated by NCAR.</font>
+<img src="images/ncar/supercomputer.png" alt="Cheyenne" style="width:100%">
 
-- Data analysis is inherently a "human-in-the-loop" workflow: <!-- .element: class="fragment" data-fragment-index="1" -->
+
+
+
+### What do we mean by Interactive Supercomputing?
+
+
+**WHAT DO WE MEAN BY INTERACTIVE SUPERCOMPUTING?**
+<hr>
+
+<!-- - A **human-in-the-loop** workflow, rapid iteration...
+- Jupyter notebooks, numpy/pandas/visualization... 
+- Adaptive scaling of computing resources based on the workload..
+
+ <img src="images/pangeo/iteration.png" alt="Iteration" style="width:70%">
+
+ -->
+
+<div class="row">
+  <div class="column">
+    <img src="images/pangeo/iteration.png" alt="Iteration" style="width:100%">
+  </div>
+  <div class="column">
+    <ul>
+  <li>A <bold>"human-in-the-loop"</bold> workflow, rapid iteration...</li>
+  <li>Jupyter notebooks, numpy/pandas/ interactive visualization... </li>
+  <li>Adaptive scaling of computing resources based on the workload...</li>
+</ul>
+  </div>
+</div>
+
+**This combination would be powerful...** <!-- .element: class="fragment" data-fragment-index="2" -->
+
+**But it is hard...** <!-- .element: class="fragment" data-fragment-index="3" -->
+
+Note:
+
+- Interact with the job while it is running, rather than submitting to a batch queue and checking back the next day. 
+- Often involves a modern UI/UX.
+- Adaptive scaling based on the workload
+- Responsiveness: short jobs or tasks should start, complete, and return control to the user quickly. 
+- Data analysis is inherently a "human-in-the-loop" workflow: 
   - May not have a concretely expressible goal: given a high-resolution global dataset of monthly climate, find "something interesting".
   - "I will know it when I see it"
   - Many trials, previous trials often inform what you try next.
-- Without interactivity, we lose the argument for using HPC for Data analysis. <!-- .element: class="fragment" data-fragment-index="2" -->
+- Without interactivity, we lose the argument for using HPC for Data analysis. 
 
 
 
-### Tools for Turning HPC Systems into Interactive Data Analysis Platforms
+### Interactive Supercomputing Challenges
+<hr>
+
+- Every high performance computing (HPC) system is unique: <!-- .element: class="fragment" data-fragment-index="1" -->
+  - Security policies
+  - Container experience/policy
+  - Queue configuration
+  - External node access policies
+- Tension between interactive availability and machine utilization (HPC centers often measured on this)... <!-- .element: class="fragment" data-fragment-index="2" -->
+- Lack of "elastic scaling" support in HPC workload managers... <!-- .element: class="fragment" data-fragment-index="3" -->
+
+Note:
+
+- Traditional HPC workloads managers don’t have good
+support for growing and shrinking allocations based on
+availability and/or demand
+- Holding unused resources leads to poor utilization
+and/or expensive for users
 
 
-### Interactivity Tools: Jupyter Notebooks
 
-- Code interactively
-- Run in a web browser
-- Integrate different forms of media and content:
-  - Code cells and their outputs
-  - Graphical widgets
-  - Narrative text
+### Enabling Technologies for Interactive Supercomputing
 
 
-### Interactivity Tools: Running Jupyter Notebooks on HPC systems
+<img src="images/scipy-stack/jupyter_logo_white.svg"
+     alt="jupyter logo"
+     width="25%">
+
+<div class="row">
+  <div class="column">
+   <img src="images/scipy-stack/jupyter-notebook-2.png" alt="Part-2" style="width:80%">
+  </div>
+  <div class="column">
+    <ul>
+  <li>Based on a set of open standards for interactive computing</li>
+  <li>Run in the web browser</li>
+  <li>Combine code execution, rich text, mathematics, plots and rich media (all in a Jupyter notebook)...</li>
+</ul>
+  </div>
+</div>
 
 
-**Commonly, inconvenient used setup:**
+### JUPYTER NOTEBOOKS ON HPC SYSTEMS
+<hr>
+
+**Q: But isn't Jupyter already usable on HCP systems?**
+
+
+**Q: But isn't Jupyter already usable on HCP systems?**
+<hr>
+
+**A: Yes, But......**
 
 - **SSH-in**
 ```console
 $ ssh <remote_user>@<remote_host>
 ```
-
 - **Launch Jupyter on a remote machine**
 ```console
 $ jupyter lab --no-browser --ip=`hostname` --port=<port>
 ```
-
-- **From the local machine, set up SSH-tunnel to the remote machine**
+- **Set up SSH-tunnel to the remote machine**
 ```console
 $ ssh -N -L <port>:<hostname>:<port> <remote_user>@<remote_host>
 ```
-
 - **Open the notebook in a browser on the local machine**
 ```console
 $ open http://localhost:<port>/
@@ -90,113 +143,205 @@ $ open http://localhost:<port>/
 
 
 
-### Interactivity Tools: JupyterHub to rescue
+### Jupyter Notebooks on HPC systems
+<hr>
 
-- Provide a general-purpose point-of-entry to interactive high performance computing services.
-- Centralized service to:
-  - provide Jupyter Server
-  - authenticate and manage users in a standard manner
+**What is missing?**
 
-
-### JupyterHub @ NCAR: Login
-https://jupyterhub.ucar.edu/
-<img src="images/jhub-ncar/login.png" width="70%">
+- Multi-user support
+- Pure web-access to HPC resources
 
 
-### JupyterHub @ NCAR: Specifying Job Configuration
-https://jupyterhub.ucar.edu/
-<img src="images/jhub-ncar/job.png" width="70%">
+<img src="images/scipy-stack/jupyterhub_white.svg"
+     alt="jupyterhub logo"
+     width="40%">
+
+to the rescue...
+
+- Used to serve Jupyter notebooks to a group of HPC users:
+  - Spawns, manages, proxies multiple instances of single-user Jupyter notebook server...
+  - Authenticates users...
+  - Supports custom spawners...
+  - Provides configurable http proxy...
+  
 
 
-### JupyterHub @ NCAR: A Running Jupyter Server
-https://jupyterhub.ucar.edu/
-<img src="images/jhub-ncar/launcher.png" width="70%">
+### JupyterHub @ NCAR
+<hr>
+
+**https://jupyterhub.ucar.edu/**
 
 
+**JupyterHub @ NCAR: Login**
 
-### Interactivity Tools: Dask
-
-- Library for parallel programming..
-- Designed to scale data libraries like NumPy, Pandas, Scikit-Learn while using a familiar API...
-- Runs in parallel using many threads / processes / machines.
-- Easy to deploy on personal computers, cloud, and **hpc systems**.
+<img src="images/jhub-ncar/login.png" width="100%">
 
 
+**JupyterHub @ NCAR: Specifying Job Configuration**
 
-### Interactivity Tools: Dask-jobqueue
-
-- Library for deploying dask on HPC systems. <img src="images/ncar/cheyenne-with-caption.png" align="right" width="50%">
-- Created as a spinoff of the Pangeo project.
-- Allows dask to interact natively with traditional HPC job schedulers like:
-  - PBS, SLURM, SGE, Torque, LSF...
-  - and others commonly found on HPC systems...
+<img src="images/jhub-ncar/job.png" width="100%">
 
 
-### Interactivity Tools: Dask-jobqueue
+**JupyterHub @ NCAR: A Running Jupyter Server**
 
-- Provides a _Pythonic_ user interface that manages dask workers/clusters through <img src="images/ncar/cheyenne-with-caption.png" align="right" width="50%">
-  - submission
-  - execution
-  - and deletion of individual jobs on an HPC system...
+<img src="images/jhub-ncar/launcher.png" width="100%">
 
 
 
-### Interactivity Tools: Dask-jobqueue
-
-```python
-from dask_jobqueue import PBSCluster
-from distributed import Client
-cluster = PBSCluster(project=..., queue=..., cores=1,
-                     processes=1, memory="20GB",
-                     walltime="00:30:00")
-
-# Manually scale by asking for ten dask workers
-cluster.scale(10)
-
-# OR scale adaptively based on the workload
-cluster.adapt(minimum=1, maximum=100, wait_count=60)
-
-# Connect this local process to remote workers
-client = Client(cluster)
-```
-
-_Note_: The cluster object stores essentially a configuration for a block of worker nodes that you will be requesting...
+### TODO: Live Demonstration: JupyterHub
 
 
 
-### Interactivity Tools: Adaptive scaling
+<img src="images/scipy-stack/dask_horizontal_white.svg"
+     alt="dask logo"
+     width="30%">
+
+<div class="row">
+  <div class="column">
+    <ul>
+  <li>Parallel programming library for Python</li>
+  <li>Scales data libraries like Numpy, Pandas, Scikit-Learn, Xarray... </li>
+  <li>Deploys on HPC systems</li>
+  <li>Culturally native to Scientific Computing</li>
+</ul>
+  </div>
+   <div class="column">
+   <ul>
+   <li>Provides schedulers for executing task graphs</li>
+   </ul>
+    <img src="images/scipy-stack/grid_search_schedule.gif" alt="task-graph" style="width:100%">
+  </div>
+</div>
+
+<!-- -  Parallel programming library for Python
+-  Scales data libraries like Numpy, Pandas, Scikit-Learn
+-  Deploys on HPC systems
+-  Culturally native to Scientific Computing
+- Provides schedulers for executing task graphs
+<img src="images/scipy-stack/grid_search_schedule.gif" width="80%"> -->
+
+
+
+### Dask-jobqueue
+
+
+**DASK-JOBQUEUE**
+<hr>
+
+<div class="row">
+  <div class="column">
+    <ul>
+  <li>Easily deploy Dask on job queuing systems like PBS, Slurm, MOAB, SGE, and LSF, etc...</li>
+  <li>Created as a spinoff of the Pangeo project.</li>
+  <li>Pythonic user interface that manages dask workers/clusters</li><!-- .element: class="fragment" data-fragment-index="2" -->
+</ul>
+  </div>
+   <div class="column">
+   <!-- .element: class="fragment" data-fragment-index="2" -->
+   <code class="python">
+    
+    from dask_jobqueue import PBSCluster
+    from distributed import Client
+    cluster = PBSCluster(project=.., 
+      queue=.., cores=1, processes=1, 
+      memory="20GB", walltime=...)
+    # Ask for 10 nodes 
+    cluster.scale(10)
+    # OR scale adaptively based on load
+    cluster.adapt(minimum=1, maximum=100, 
+                wait_count=60)
+    # Connect to remote workers
+    client = Client(cluster)
+
+   </code>
+   <!-- .element: class="fragment" data-fragment-index="2" -->
+   <font size="4">Note: The cluster object stores a configuration for a block of worker nodes that you will be requesting...</font>
+  </div>
+</div>
+
+
+**DASK-JOBQUEUE**
+<hr>
+
+<div class="row">
+  <div class="column">
+    <ul>
+  <li>Easily deploy Dask on job queuing systems like PBS, Slurm, MOAB, SGE, and LSF, etc...</li>
+  <li>Created as a spinoff of the Pangeo project.</li>
+  <li>Pythonic user interface that manages dask workers/clusters</li>
+</ul>
+  </div>
+   <div class="column">
+   <code class="python">
+    
+    from dask_jobqueue import SLURMCluster
+    from distributed import Client
+    cluster = SLURMCluster(project=.., 
+      queue=.., cores=1, processes=1, 
+      memory="20GB", walltime=...)
+    # Ask for 10 nodes 
+    cluster.scale(10)
+    # OR scale adaptively based on load
+    cluster.adapt(minimum=1, maximum=100, 
+                wait_count=60)
+    # Connect to remote workers
+    client = Client(cluster)
+
+   </code>
+   <font size="4">Note: The cluster object stores a configuration for a block of worker nodes that you will be requesting...</font>
+  </div>
+</div>
+
+
+
+### TODO: Live Demonstration: Dask-jobqueue
+
+
+
+### Adaptive/Elastic scaling, Resilience, etc...
+
+
+### Adaptive/Elastic scaling
+<hr>
 
 _Challenges:_ 
 - Balancing cluster resources and performance can be challenging, and requires a lot of experimentation...
 - Computational workloads aren't constant, they rather fluctuate throughout the analysis...
 
+**Dask thinks about ...** <!-- .element: class="fragment" data-fragment-index="2" -->
 
-### Interactivity Tools: Adaptive scaling
+- Scaling up and down <!-- .element: class="fragment" data-fragment-index="2" -->
+- Resilience <!-- .element: class="fragment" data-fragment-index="2" -->
+- Load balancing <!-- .element: class="fragment" data-fragment-index="2" -->
 
-_Solutions:_
+
+### Adaptive/Elastic scaling on HPC systems
+<hr>
+
+_Solution:_
+
 - Start your Jupyter Notebook, instantiate your dask cluster, and then do science...
-- Let dask determine when to scale up and/or down depending on the commputational workload...
+- Let dask determine when to scale up and/or down depending on the computational workload...
 
 
-### Interactivity Tools: Adaptive scaling & Resilience
+### Adaptive/Elastic scaling on HPC systems
+<hr>
 
 _Benefits:_
 - Dask's adaptive scaling improves HPC systems' occupancy / utilization...
 - Dask’s resilience against the death of all or part of its workers provides new ways of leveraging job preemption...
 
 
-### Live Demonstration
-
-
  
 ### Questions? Thoughts?
 
-- [Dask-jobqueue workshop materials](https://github.com/willirath/dask_jobqueue_workshop_materials)
 - https://dask.pydata.org/
 - https://jobqueue.dask.org/
 - https://distributed.dask.org/
+- - [Dask-jobqueue workshop materials](https://github.com/willirath/dask_jobqueue_workshop_materials)
+-  [Jupyter for Science User Facilities and High Performance Computing workshop](https://jupyter-workshop-2019.lbl.gov/agenda)
 - https://github.com/jupyterhub
-- [Jupyter for Science User Facilities and High Performance Computing workshop](https://jupyter-workshop-2019.lbl.gov/agenda)
+
 
 **Participate**
 
