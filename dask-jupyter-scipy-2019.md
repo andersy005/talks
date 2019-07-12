@@ -1,5 +1,4 @@
-### Interactive 
-### Supercomputing 
+### Interactive Supercomputing 
 ### with
  
 <img src="images/scipy-stack/jupyter_logo_white.svg" width="30%">
@@ -90,9 +89,10 @@
   </div>
   <div class="column">
     <ul>
-  <li>Need for more <bold>"human-in-the-loop"</bold> workflows, rapid iteration due to huge growth in data creation</li>
-  <li>Jupyter notebooks, interactive visualization, etc</li>
-  <li>Adaptive scaling of computing resources based on the load</li>
+  <li>Need for more <bold>"human-in-the-loop"</bold> workflows due to huge growth in data creation</li>
+  <li>Rapid iteration with tools like Jupyter notebooks</li>
+  <li>In situ data analytics</li>
+  <li>Adaptive scaling of computing resources</li>
 </ul>
   </div>
 </div>
