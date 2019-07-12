@@ -7,7 +7,48 @@ _Anderson Banihirwe, Software Engineer_
 
 National Center for Atmospheric Research (NCAR)
 
+<font size="5">Slides: https://andersonbanihirwe.dev/talks/dask-jupyter-scipy-2019.html</font>
+
+<font size="5">Github: [@andersy005](https://github.com/andersy005)</font>
+
 <font size="4">SciPy 2019, Austin, TX.</font > 
+
+
+
+<div class="row">
+  <div class="column">
+    <img src="images/user-silhouette.jpg" alt="example-1" style="width:80%">
+    <ul>
+     <li> Alice, project scientist @ NCAR </li>
+     <li> Field of Expertise: Hydrology/Hydrometeorolgy</li>
+    </ul>
+  </div>
+   
+  <div class="column">
+    <img src="images/ncar/scientist_example_notebook.png" alt="example-2" style="width:12%;background-position: cover">
+  </div>
+</div>
+  
+
+
+### 1) NCAR Infrastructure
+<hr>
+<img src="images/jhub-ncar/ncar-infrastructure.png" alt="ncar-infra" style="width:100%">
+
+
+### 2) Dask-jobqueue in Action
+<hr>
+<img src="images/jhub-ncar/dask-jobqueue.png" alt="dask-jobqueue" style="width:70%">
+
+
+### 3) Actual Science
+<hr>
+
+<img src="images/pangeo/intra_ensemble_code.png" alt="example-1" style="width:49%; background:white">
+
+<img src="images/pangeo/precipitation_austin_code.png" alt="example-2" style="width:49%">
+</div>
+
 
 
 
@@ -46,9 +87,9 @@ National Center for Atmospheric Research (NCAR)
   </div>
   <div class="column">
     <ul>
-  <li>A <bold>"human-in-the-loop"</bold> workflow, rapid iteration...</li>
-  <li>Jupyter notebooks, numpy/pandas/ interactive visualization... </li>
-  <li>Adaptive scaling of computing resources based on the workload...</li>
+  <li>Need for more <bold>"human-in-the-loop"</bold> workflows, rapid iteration due to huge growth in data creation</li>
+  <li>Jupyter notebooks, interactive visualization, etc</li>
+  <li>Adaptive scaling of computing resources based on the load</li>
 </ul>
   </div>
 </div>
@@ -74,13 +115,14 @@ Note:
 ### Interactive Supercomputing Challenges
 <hr>
 
-- Every high performance computing (HPC) system is unique: <!-- .element: class="fragment" data-fragment-index="1" -->
+- Every high performance computing (HPC) system is unique:
   - Security policies
   - Container experience/policy
   - Queue configuration
   - External node access policies
-- Tension between interactive availability and machine utilization (HPC centers often measured on this)... <!-- .element: class="fragment" data-fragment-index="2" -->
-- Lack of "elastic scaling" support in HPC workload managers... <!-- .element: class="fragment" data-fragment-index="3" -->
+- Tension between interactive availability and machine utilization (HPC centers often measured on this)... 
+- Lack of "elastic scaling" support in HPC workload managers... 
+  
 
 Note:
 
@@ -105,12 +147,19 @@ and/or expensive for users
   </div>
   <div class="column">
     <ul>
-  <li>Based on a set of open standards for interactive computing</li>
-  <li>Run in the web browser</li>
-  <li>Combine code execution, rich text, mathematics, plots and rich media (all in a Jupyter notebook)...</li>
+  <li><bold>Interactive</bold>, web browser-based computing environment</li>
+  <li><bold>Reproducible</bold> document format.
+  <ul>
+  <li>Code</li>
+  <li>Prose</li>
+  <li>Equations (LaTeX)</li>
+  <li>Visualizations</li>
+  </li>
+
 </ul>
   </div>
 </div>
+
 
 
 ### JUPYTER NOTEBOOKS ON HPC SYSTEMS
@@ -152,43 +201,50 @@ $ open http://localhost:<port>/
 - Pure web-access to HPC resources
 
 
+
 <img src="images/scipy-stack/jupyterhub_white.svg"
      alt="jupyterhub logo"
-     width="40%">
+     width="25%">
 
 to the rescue...
 
-- Used to serve Jupyter notebooks to a group of HPC users:
-  - Spawns, manages, proxies multiple instances of single-user Jupyter notebook server...
-  - Authenticates users...
-  - Supports custom spawners...
-  - Provides configurable http proxy...
-  
+<div class="row">
+  <div class="column">
+   <img src="images/jhub-ncar/jhub-parts.png" alt="Jhub" style="width:70%">
+  </div>
+  <div class="column">
+    <ul>
+  <li>Manages authentication</li>
+  <li>Spawns single-user servers on-demand</li>
+  <li>Each user gets a complete notebook server</li>
+</ul>
+  </div>
+</div>
+
 
 
 ### JupyterHub @ NCAR
-<hr>
-
-**https://jupyterhub.ucar.edu/**
 
 
 **JupyterHub @ NCAR: Login**
 
-<img src="images/jhub-ncar/login.png" width="100%">
+<img src="images/jhub-ncar/login-jhub.png" width="100%">
 
 
 **JupyterHub @ NCAR: Specifying Job Configuration**
 
-<img src="images/jhub-ncar/job.png" width="100%">
+<img src="images/jhub-ncar/spawner-jhub-options.png" width="100%">
 
 
 **JupyterHub @ NCAR: A Running Jupyter Server**
 
-<img src="images/jhub-ncar/launcher.png" width="100%">
+<img src="images/jhub-ncar/running-notebook-server.png" width="100%">
 
 
+### JupyterHub Live Demo 
+<font size="3">(if live demo gods are in a good mood...)</font>
 
-### TODO: Live Demonstration: JupyterHub
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dlrtt74FMCs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 
 
@@ -228,36 +284,9 @@ to the rescue...
 **DASK-JOBQUEUE**
 <hr>
 
-<div class="row">
-  <div class="column">
-    <ul>
-  <li>Easily deploy Dask on job queuing systems like PBS, Slurm, MOAB, SGE, and LSF, etc...</li>
-  <li>Created as a spinoff of the Pangeo project.</li>
-  <li>Pythonic user interface that manages dask workers/clusters</li><!-- .element: class="fragment" data-fragment-index="2" -->
-</ul>
-  </div>
-   <div class="column">
-   <!-- .element: class="fragment" data-fragment-index="2" -->
-   <code class="python">
-    
-    from dask_jobqueue import PBSCluster
-    from distributed import Client
-    cluster = PBSCluster(project=.., 
-      queue=.., cores=1, processes=1, 
-      memory="20GB", walltime=...)
-    # Ask for 10 nodes 
-    cluster.scale(10)
-    # OR scale adaptively based on load
-    cluster.adapt(minimum=1, maximum=100, 
-                wait_count=60)
-    # Connect to remote workers
-    client = Client(cluster)
-
-   </code>
-   <!-- .element: class="fragment" data-fragment-index="2" -->
-   <font size="4">Note: The cluster object stores a configuration for a block of worker nodes that you will be requesting...</font>
-  </div>
-</div>
+- Easily deploy Dask on job queuing systems like PBS, Slurm, MOAB, SGE, and LSF, etc...
+- Created as a spinoff of the Pangeo project.
+- Pythonic user interface that manages dask workers/clusters
 
 
 **DASK-JOBQUEUE**
@@ -265,20 +294,13 @@ to the rescue...
 
 <div class="row">
   <div class="column">
-    <ul>
-  <li>Easily deploy Dask on job queuing systems like PBS, Slurm, MOAB, SGE, and LSF, etc...</li>
-  <li>Created as a spinoff of the Pangeo project.</li>
-  <li>Pythonic user interface that manages dask workers/clusters</li>
-</ul>
-  </div>
-   <div class="column">
-   <code class="python">
+    <code class="python">
     
-    from dask_jobqueue import SLURMCluster
+    from dask_jobqueue import PBSCluster
     from distributed import Client
-    cluster = SLURMCluster(project=.., 
+    cluster = PBSCluster(project=.., 
       queue=.., cores=1, processes=1, 
-      memory="20GB", walltime=...)
+      memory="100GB", walltime=...)
     # Ask for 10 nodes 
     cluster.scale(10)
     # OR scale adaptively based on load
@@ -288,13 +310,34 @@ to the rescue...
     client = Client(cluster)
 
    </code>
-   <font size="4">Note: The cluster object stores a configuration for a block of worker nodes that you will be requesting...</font>
+  </div>
+   <div class="column"> 
+   <code class="python"> <!-- .element: class="fragment" data-fragment-index="3" -->
+    
+    from dask_jobqueue import SLURMCluster
+    from distributed import Client
+    cluster = SLURMCluster(project=.., 
+      queue=.., cores=1, processes=1, 
+      memory="100GB", walltime=...)
+    # Ask for 10 nodes 
+    cluster.scale(10)
+    # OR scale adaptively based on load
+    cluster.adapt(minimum=1, maximum=100, 
+                wait_count=60)
+    # Connect to remote workers
+    client = Client(cluster)
+
+   </code>
   </div>
 </div>
 
+<font size="4">Note: The cluster object stores a configuration for a block of worker nodes that you will be requesting...</font>
 
 
-### TODO: Live Demonstration: Dask-jobqueue
+### Dask-jobqueue Live Demo
+<font size="3">(if live demo gods are in a good mood...)</font>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QUzFis0VZac" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 
 
@@ -305,8 +348,10 @@ to the rescue...
 <hr>
 
 _Challenges:_ 
-- Balancing cluster resources and performance can be challenging, and requires a lot of experimentation...
-- Computational workloads aren't constant, they rather fluctuate throughout the analysis...
+- Balancing cluster resources and performance
+  - is challenging
+  - requires a lot of experimentation...
+- Computational workloads fluctuate throughout the analysis...
 
 **Dask thinks about ...** <!-- .element: class="fragment" data-fragment-index="2" -->
 
@@ -320,29 +365,54 @@ _Challenges:_
 
 _Solution:_
 
-- Start your Jupyter Notebook, instantiate your dask cluster, and then do science...
-- Let dask determine when to scale up and/or down depending on the computational workload...
+1. Start your Jupyter Notebook
+2. Instantiate your dask cluster
+3. Let dask determine when to scale up and/or down
+4. **Do science**
 
 
 ### Adaptive/Elastic scaling on HPC systems
 <hr>
 
 _Benefits:_
-- Dask's adaptive scaling improves HPC systems' occupancy / utilization...
-- Dask’s resilience against the death of all or part of its workers provides new ways of leveraging job preemption...
+
+- Adaptive scaling improves HPC systems' occupancy / utilization...
+- Resilience against the death of all or part of computing resources provides new ways of leveraging job preemption...
+
+**Dask thinks about these benefits...** <!-- .element: class="fragment" data-fragment-index="2" -->
 
 
+
+### Not all jobs are interactive
+
+<img src="images/scipy-stack/dask-mpi.png" alt="dask-mpi" style="width:50%">
+
+
+
+### Future
+
+- Heterogeneous resources handling
+- Coarse-Grained Diagnostics and History
+- Scheduler Performance on Large Graphs
  
-### Questions? Thoughts?
 
-- https://dask.pydata.org/
+
+### Resources
+
 - https://jobqueue.dask.org/
-- https://distributed.dask.org/
-- - [Dask-jobqueue workshop materials](https://github.com/willirath/dask_jobqueue_workshop_materials)
--  [Jupyter for Science User Facilities and High Performance Computing workshop](https://jupyter-workshop-2019.lbl.gov/agenda)
-- https://github.com/jupyterhub
-
+- https://mpi.dask.org
+- [Dask-jobqueue workshop materials](https://github.com/willirath/dask_jobqueue_workshop_materials)
+- [Jupyter for Science User Facilities and High Performance Computing workshop](https://jupyter-workshop-2019.lbl.gov/agenda)
 
 **Participate**
 
-Community Issue Tracker: [github.com/pangeo-data/pangeo](https://github.com/pangeo-data/pangeo/issues)
+- https://github.com/dask/dask-jobqueue/issues
+- https://github.com/dask/dask-mpi/issues
+
+
+
+### Acknowledgments!
+
+- Jupyter/JupyterHub development teams
+- NCAR/CISL Supercomputer Systems, Consulting Services Groups
+- Pangeo collaborators
