@@ -396,8 +396,13 @@ _Benefits:_
 <hr>
 
 - Heterogeneous resources handling
-- Coarse-Grained Diagnostics and History
-- Scheduler Performance on Large Graphs
+  - Workers with low or high memory
+  - Workers with GPUs
+
+- Coarse-Grained Diagnostics and History:
+  - Can we persist or store history of computations and tasks executed on a scheduler?
+- Scheduler Performance on Large Graphs:
+  - Today, handling millions of tasks leads to tens of seconds latency
  
 
 
