@@ -1,11 +1,13 @@
-## Interactive Supercomputing with Jupyter and Dask
-
+### Interactive 
+### Supercomputing 
+### with
+ 
 <img src="images/scipy-stack/jupyter_logo_white.svg" width="30%">
 <img src="images/scipy-stack/dask_horizontal_white.svg" width="30%">
 
-_Anderson Banihirwe ([@andersy005](https://github.com/andersy005)), Software Engineer_
+<font size="5">_Anderson Banihirwe ([@andersy005](https://github.com/andersy005)), Software Engineer_<font size="3">
 
-National Center for Atmospheric Research (NCAR)
+<font size="5">National Center for Atmospheric Research (NCAR)</font>
 
 <font size="3">SciPy 2019, Austin, TX.</font> 
 
@@ -24,7 +26,7 @@ National Center for Atmospheric Research (NCAR)
   </div>
    
   <div class="column">
-    <img src="images/ncar/scientist_example_notebook.png" alt="example-2" style="width:12%;background-position: cover">
+    <img src="images/ncar/scientist_example_notebook.png" alt="example-2" style="width:9%">
   </div>
 </div>
 
@@ -144,7 +146,7 @@ and/or expensive for users
 
 <div class="row">
   <div class="column">
-   <img src="images/scipy-stack/jupyter-notebook-2.png" alt="Part-2" style="width:80%">
+   <img src="images/scipy-stack/jupyter-notebook-2.png" alt="notebook" style="width:80%">
   </div>
   <div class="column">
     <ul>
@@ -205,7 +207,7 @@ $ open http://localhost:<port>/
 
 <img src="images/scipy-stack/jupyterhub_white.svg"
      alt="jupyterhub logo"
-     width="25%">
+     width="23%">
 
 to the rescue...
 
