@@ -3,15 +3,14 @@
 <img src="images/scipy-stack/jupyter_logo_white.svg" width="30%">
 <img src="images/scipy-stack/dask_horizontal_white.svg" width="30%">
 
-_Anderson Banihirwe, Software Engineer_
+_Anderson Banihirwe ([@andersy005](https://github.com/andersy005)), Software Engineer_
 
 National Center for Atmospheric Research (NCAR)
 
-<font size="5">Slides: https://andersonbanihirwe.dev/talks/dask-jupyter-scipy-2019.html</font>
+<font size="3">SciPy 2019, Austin, TX.</font> 
 
-<font size="5">Github: [@andersy005](https://github.com/andersy005)</font>
+<font size="4">Slides: https://andersonbanihirwe.dev/talks/dask-jupyter-scipy-2019.html</font>
 
-<font size="4">SciPy 2019, Austin, TX.</font > 
 
 
 
@@ -28,7 +27,9 @@ National Center for Atmospheric Research (NCAR)
     <img src="images/ncar/scientist_example_notebook.png" alt="example-2" style="width:12%;background-position: cover">
   </div>
 </div>
-  
+
+
+### 3 interesting things about Alice's notebook
 
 
 ### 1) NCAR Infrastructure
@@ -36,7 +37,7 @@ National Center for Atmospheric Research (NCAR)
 <img src="images/jhub-ncar/ncar-infrastructure.png" alt="ncar-infra" style="width:100%">
 
 
-### 2) Dask-jobqueue in Action
+### 2) Distributed computing resources
 <hr>
 <img src="images/jhub-ncar/dask-jobqueue.png" alt="dask-jobqueue" style="width:70%">
 
@@ -210,7 +211,7 @@ to the rescue...
 
 <div class="row">
   <div class="column">
-   <img src="images/jhub-ncar/jhub-parts.png" alt="Jhub" style="width:70%">
+   <img src="images/jhub-ncar/jhub-parts.png" alt="Jhub" style="width:68%">
   </div>
   <div class="column">
     <ul>
@@ -238,7 +239,7 @@ to the rescue...
 
 **JupyterHub @ NCAR: A Running Jupyter Server**
 
-<img src="images/jhub-ncar/running-notebook-server.png" width="100%">
+<img src="images/jhub-ncar/running-notebook-server.png" width="80%">
 
 
 ### JupyterHub Live Demo 
@@ -390,6 +391,7 @@ _Benefits:_
 
 
 ### Future
+<hr>
 
 - Heterogeneous resources handling
 - Coarse-Grained Diagnostics and History
@@ -398,6 +400,7 @@ _Benefits:_
 
 
 ### Resources
+<hr>
 
 - https://jobqueue.dask.org/
 - https://mpi.dask.org
@@ -411,7 +414,7 @@ _Benefits:_
 
 
 
-### Acknowledgments!
+### Acknowledgments
 
 - Jupyter/JupyterHub development teams
 - NCAR/CISL Supercomputer Systems, Consulting Services Groups
