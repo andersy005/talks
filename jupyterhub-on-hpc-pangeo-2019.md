@@ -1,6 +1,6 @@
 <img src="images/scipy-stack/jupyterhub_white.svg"
      alt="jupyterhub logo"
-     width="80%">
+     width="70%">
 ## On HPC
 
 <font size="5">_Anderson Banihirwe ([@andersy005](https://github.com/andersy005)), Software Engineer_<font size="3">
@@ -24,9 +24,9 @@
 
 ### 2019: Dreams Do Come True*
 
-<img src="images/ncar/jhub-ncar-home.png" alt="ncar-infra" style="width:90%">
+<img src="images/ncar/jhub-ncar-home.png" alt="ncar-infra" style="width:85%">
   
-<font size="5">Along comes JupyterHub on Cheyenne:</font> 
+<font size="3">Along comes JupyterHub on Cheyenne:</font> 
 <font size="3">https://dailyb.cisl.ucar.edu/bulletins/jupyterhub-available-use-pre-production-mode</font> 
 
 
@@ -51,7 +51,7 @@
 
 <img src="images/gifs/jupyterhub-cheyenne=live.gif"
      alt="jhub-demo"
-     width="90%">
+     width="85%">
 
 
 ### 2021: JupyterHub becomes a **first-class service** on Cheyenne's successor! 
@@ -63,7 +63,7 @@
 
 
 
-### Wishlist
+### 2019: Wishlist
 
 - Testable deployment
   - Would love to hook into JupyterHub's test framework
