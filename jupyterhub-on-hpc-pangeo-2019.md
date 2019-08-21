@@ -66,13 +66,11 @@
 ### 2019: Wishlist
 
 - Testable deployment
-  - Would love to hook into JupyterHub's test framework
-  - Get CI testing during development - not there yet (:
-- Continuous JupyterHub performance monitoring
+  - Would love to hook into JupyterHub's test framework - not there yet (:
 - JupyterHub Status Page (extension??) for communicating:
-  - incidents
   - scheduled maintenances
   - downtimes
+- BinderHub for HPC: https://discourse.jupyter.org/t/binderhub-for-hpc/143 
 
 
 
