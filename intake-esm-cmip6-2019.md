@@ -81,6 +81,8 @@ dsets = cat.to_dataset_dict(cdf_kwargs={"chunks" : {"time" : 36}})
 
 <img src="https://imgs.xkcd.com/comics/standards.png">
 
+via https://xkcd.com/927/
+
 
 <img src="images/scipy-stack/intake-esm/esm-collection-spec.png" style="width:60%">
 
