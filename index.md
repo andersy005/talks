@@ -1,5 +1,6 @@
 I've given talks at academic and software conferences. Some of these are recorded and available online:
 
+- [Intake-esm -- Making It Easier To Consume Climate Data](./intake-esm-cmip6-2019.html) - CMIP6 Hackathon 2019. Boulder, CO.
 - [JupyterHub on HPC](./jupyterhub-on-hpc-pangeo-2019.html) - Pangeo Meeting 2019. Seattle, WA. August 2019
 - [Intake-esm](./intake-esm-pangeo-2019.html) - Pangeo Meeting 2019. Seattle, WA. August 2019
 - [Turning HPC Systems into Interactive Data Analysis Platforms using Jupyter and Dask](./dask-jupyter-scipy-2019.html) - SciPy 2019. Austin, TX. July 2019
