@@ -1,5 +1,7 @@
 I've given talks at academic and software conferences. Some of these are recorded and available online:
 
+
+- [Intake-esm -- Making It Easier To Consume Climate and Weather Data](./intake-esm-esip-2020.html) - ESIP Summer Meeting 2020. July 2020
 - [Intake-esm -- Making It Easier To Consume Climate Data](./intake-esm-cmip6-2019.html) - CMIP6 Hackathon 2019. Boulder, CO.
 - [JupyterHub on HPC](./jupyterhub-on-hpc-pangeo-2019.html) - Pangeo Meeting 2019. Seattle, WA. August 2019
 - [Intake-esm](./intake-esm-pangeo-2019.html) - Pangeo Meeting 2019. Seattle, WA. August 2019
