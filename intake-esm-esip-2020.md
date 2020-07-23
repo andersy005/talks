@@ -11,7 +11,6 @@
     <ul>
       <li>Thanks for the opportunity to speak.</li>
       <li>I work as a software engineer @ the National Center for Atmospheric Research (aka NCAR).</li>
-      <li>I am also a member of the Pangeo community.</li>
       <li>Today, I am just going to talk about intake-esm, which is a Python data discovery/cataloging tool for earth system model outputs.</li>
    </ul>
   </aside>
@@ -59,7 +58,7 @@ So much time ⏰ is spent on finding and understanding data
 
 
 
-### Exploring intake-esm Features: CMIP6  Use Case
+### CMIP6 Use Case
 
 <div class="row">
   <div class="column">
@@ -70,12 +69,12 @@ So much time ⏰ is spent on finding and understanding data
   </div>
   
   <div class="column">
-    <img src="http://gallery.pangeo.io/_images/thumbnail5.png" alt="example-2">
+    <iframe src="https://www.google.com/maps/d/embed?mid=1qgItlbd11j6wzirf6vo2Zq_uYqaP4baQ" width="640" height="480"></iframe>
   </div>
 </div>
 
 
-### Exploring intake-esm Features: CMIP6  Use Case
+### CMIP6 Use Case
 
 ```bash
 $ # Total number of netCDF files for CMIP6 Data
@@ -88,18 +87,20 @@ $ du -sh --apparent-size --dereference .
 ```
 
 
-#### Opening an Earth System Model (ESM) catalog
+#### Opening the Pangeo CMIP6 catalog
+- This points to CMIP6 data hosted in Google cloud storage
 <img img src="images/intake-esm/catalog-summary.png">
 
 
-#### ESM catalog
+
+#### Anatomy of an ESM catalog
 <div class="row">
   <div class="column">
     <ul>
-     <li> A single JSON file </li>
-     <li> Provides metadata about the catalog (a CSV file)</li>
+     <li>A single JSON file </li>
+     <li>Provides metadata about the catalog (a CSV file)</li>
      <li>Tells us what we expect to find inside the catalog</li>
-     <li>How to aggregate/combine compatible groups of data assets</li>
+     <li>Provides info on how to aggregate/combine compatible groups of data assets</li>
     </ul>
   </div>
    
@@ -137,24 +138,27 @@ Search by facets, keywords, patterns etc.
 <img img src="images/intake-esm/data-loading.png">
 
 
-<img img src="images/intake-esm/data-exploration.png">
+#### Data Analysis
+
+<img img src="images/intake-esm/data-exploration.png" style="width:50%">
+
+**Check out the example notebook: https://github.com/earthcube2020/ec20_banihirwe_etal**
 
 
 
-
-### Accessing catalogs using catalog.pangeo.io
+### Accessing catalogs using [catalog.pangeo.io](https://catalog.pangeo.io/)
 
 - The Pangeo project offers a means of viewing catalogs from a standalone web application.
 
 - CMIP6 catalog browser: https://catalog.pangeo.io/browse/master/climate/cmip6_gcs/
 
 
-### Accessing catalogs using catalog.pangeo.io
+### Accessing catalogs using [catalog.pangeo.io](https://catalog.pangeo.io/)
 
 <img src="https://nbviewer.jupyter.org/github/earthcube2020/ec20_banihirwe_etal/blob/master/images/pangeo-catalog.png">
 
 
-### Accessing catalogs using catalog.pangeo.io
+### Accessing catalogs using [catalog.pangeo.io](https://catalog.pangeo.io/)
 
 <img src="https://nbviewer.jupyter.org/github/earthcube2020/ec20_banihirwe_etal/blob/master/images/esm-demo.gif">
 
@@ -165,6 +169,14 @@ Search by facets, keywords, patterns etc.
 - Merging ESM collection specifications into [SpatioTemporal Asset Catalog (STAC) specification](https://stacspec.org/) to offer a more universal specification standard
   - https://github.com/NCAR/esm-collection-spec/issues/21
 - Development of tools to verify and describe catalogued data on a regular basis
+
+
+
+### Getting involved
+
 - Please reach out if you are interested in participating in any way.
   - Pangeo Discourse: https://discourse.pangeo.io/
   - Intake-esm: https://github.com/intake/intake-esm
+
+
+### Thanks!
