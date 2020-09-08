@@ -11,7 +11,7 @@
     <ul>
       <li>Thanks for the opportunity to speak.</li>
       <li>I work as a software engineer @ the National Center for Atmospheric Research (aka NCAR).</li>
-      <li>Today, I am just going to talk about intake which is a Python data discovery/cataloging tool and intake-esm, an intake plugin for earth system model outputs.</li>
+      <li>Today, I am just going to talk about zarr.</li>
    </ul>
   </aside>
 
@@ -40,6 +40,13 @@ Newer cloud optimized data formats:
 - Cloud Optimized GeoTIFF (COG): [cogeotiff](https://github.com/cogeotiff)
 - TileDB: [TileDB-Inc/TileDB](https://github.com/TileDB-Inc/TileDB)
 - **Zarr**
+
+
+### Why Care?
+
+A growing list of analysis ready, public geo-spatial datasets in zarr format:
+
+<img src="images/zarr/aws-public-datasets.png" width="50%">
 
 
 
@@ -73,10 +80,11 @@ Newer cloud optimized data formats:
 
 ## Core Features: Compression
 
+[zarr-developers/numcodecs](https://github.com/zarr-developers/numcodecs) Python package provides a high level API for configuring compression and filters for zarr arrays.
+
 - **lossless**: reversible i.e. data can be restored in its original form.
 - **lossy**: irreversible i.e. some information is lost (can't go back to the original)
 
-[zarr-developers/numcodecs](https://github.com/zarr-developers/numcodecs) Python package provides a high level API for configuring compression and filters for zarr arrays.
 
 
 ## Core Features: Compression
@@ -94,9 +102,13 @@ Newer cloud optimized data formats:
 - Bring Your Own. **Zarr arrays can be stored in any key-value store**
 
 
-#### Zarr in Action: AWS and Google Public Datasets
 
-<img src="images/zarr/aws-public-datasets.png" width="50%">
+### Learning more
+
+*Other Zarr sessions/talks to be delivered @ Cloud Native Geospatial Outreach Day*:
+
+- **2020 NASA SpaceApps Challenge and OceanHackweek: Cloud Optimized GeoTiffs and Zarr on AWS PDS** - Aimee Barciauskas
+- **Introduction to Multi-Scale Ultra High Resolution (MUR) Sea Surface Temperature (SST) Zarr on AWS PDS** - Aimee Barciauskas
 
 
 
