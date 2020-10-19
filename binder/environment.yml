@@ -11,5 +11,6 @@ dependencies:
   - pip
   - proplot
   - s3fs
+  - zarr
   - pip:
       - git+https://github.com/intake/intake-esm@master
