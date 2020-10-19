@@ -1,6 +1,18 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.2.3
+    rev: v3.2.0
     hooks:
       - id: end-of-file-fixer
       - id: double-quote-string-fixer
+
+  - repo: https://github.com/deathbeds/prenotebook
+    rev: f5bdb72a400f1a56fe88109936c83aa12cc349fa
+    hooks:
+      - id: prenotebook
+        args:
+          [
+            '--keep-output',
+            '--keep-metadata',
+            '--keep-execution-count',
+            '--keep-empty',
+          ]
