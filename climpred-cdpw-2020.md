@@ -54,11 +54,32 @@ writing in-house code solutions (e.g., NCL, MATLAB, GrADS, FORTRAN)  for handlin
 
 <hr>
 
-**Solution**: a resounding yes... `Climpred`, an xarray wrapper for analyzing ensemble forecast models for climate prediction.
+**Solution**: a resounding yes...
+
+
+## climpred
+
+[github.com/pangeo-data/climpred](github.com/pangeo-data/climpred)
+<img src="images/climpred-repo.png" width="80%">
 
 
 ## Demo
 
 
 
-### Thanks
+## Roadmap
+
+- Continuously adding new metrics and skill scores to the package. 
+- Modularization of the bootstrapping system.
+- Addition of new reference forecasts
+
+
+
+
+## Thanks
+
+- Please get involved!
+  - https://github.com/pangeo-data/climpred
+  - https://gitter.im/climpred
+
+<img src="images/climpred-repo.png" width="50%">
