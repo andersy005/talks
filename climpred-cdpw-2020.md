@@ -17,6 +17,12 @@
 
 
 
+## But first, a word about "Pangeo"
+
+<img src="images/pangeo.png" width="90%">
+
+
+
 ## Why Care?
 
 **Problem (1)**: Our ability to produce large datasets from Earth System Models (ESM) 
