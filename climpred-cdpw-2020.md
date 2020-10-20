@@ -37,6 +37,7 @@ Has surpassed our ability to analyze them
 ```
 
 
+
 ## Why Care?
 
 **Problem (2)**: The sheer increase in available climate, weather datasets 
@@ -64,6 +65,7 @@ writing in-house, customized code solutions (e.g., NCL, MATLAB, GrADS, FORTRAN) 
 </aside>
 
 
+
 ## Why Care?
 
 **Question**: Can we spend more time analyzing output and less time writing (and re-writing) code?
@@ -71,6 +73,7 @@ writing in-house, customized code solutions (e.g., NCL, MATLAB, GrADS, FORTRAN) 
 <hr>
 
 **Answer**: a resounding yes... and `climpred` strives to be among the solutions...
+
 
 
 ## climpred
@@ -85,7 +88,23 @@ writing in-house, customized code solutions (e.g., NCL, MATLAB, GrADS, FORTRAN) 
 </aside>
 
 
+
+### Features
+
+- `HindcastEnsemble`: for climate prediction ensembles initialized by a data-like product.
+- `PerfectModelEnsemble`: for **perfect model** climate prediction ensembles.
+- `.verify()`: for verifying the initialized ensemble or predictions.
+- `.bootstrap()`: for bootstraping with replacement according to Goddard et al.
+- `metrics`
+- Reference forecasts
+
+See [API reference](https://climpred.readthedocs.io/en/stable/api.html#) for more details.
+
+
+
 ## Demo
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SKXUBD6DGao" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 
