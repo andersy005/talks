@@ -13,39 +13,49 @@
       <li>I work as a software engineer @ the National Center for Atmospheric Research (aka NCAR).</li>
       <li>Today, I am just going to talk about climpred, a Python package designed for handling ensemble re-forecast data.</li>
    </ul>
-  </aside>
+</aside>
 
 
 
 ## Why Care?
 
-**Problem (1)**: Our ability to produce large datasets from Earth System Model (ESM)s
+**Problem (1)**: Our ability to produce large datasets from Earth System Models (ESM) 
 <hr>
 Has surpassed our ability to analyze them
+<hr>
+
+```console
+❯ Example: The CMIP6-Decadal Climate Prediction Project (DCPP) output
+❯ du -sh --dereference /glade/collections/cmip/CMIP6/DCPP
+84T	/glade/collections/cmip/CMIP6
+```
+
+
+## Why Care?
+
+**Problem (2)**: The sheer increase in available climate, weather datasets 
+
+<hr>
+
+demands that scientific analysis tools be **generic**, **frictionless** and **open source**.
+
+<aside class="notes">
+   <p>Generic software is software that can perform many different tasks. It is not limited to one particular application.</p>
+</aside>
 
 
 
 ## Why Care?
 
-**Problem (2)**: A typical output from an ESM model run in forecast mode contains a lot of dimensions such as
+**Problem (3)**: Scientists spend a considerable portion of their research time
 
 <hr>
 
-`initialization date` , `lead time` , `ensemble member` , `latitude` , `longitude` , and/or `depth`
+writing in-house, customized code solutions (e.g., NCL, MATLAB, GrADS, FORTRAN)  for handling forecast verifications, etc..
 
-<hr>
-
-These dimensions are not easy to keep track of during data analysis.
-
-
-## Why Care?
-
-**Problem (3)**: Scientists spend a consideration portion of their research time
-
-<hr>
-
-writing in-house code solutions (e.g., NCL, MATLAB, GrADS, FORTRAN)  for handling forecast verifications, etc..
-
+<aside class="notes">
+   <p>Generic Software is harder to develop as one has to take into account a lot requirements which will be useful for a number of stakeholders/users.. So, scientists tend to prefer writing in-house, custom solutions</p>
+</aside>
 
 
 ## Why Care?
@@ -54,7 +64,7 @@ writing in-house code solutions (e.g., NCL, MATLAB, GrADS, FORTRAN)  for handlin
 
 <hr>
 
-**Solution**: a resounding yes...
+**Answer**: a resounding yes... and `climpred` strives to be among the solutions...
 
 
 ## climpred
@@ -62,24 +72,40 @@ writing in-house code solutions (e.g., NCL, MATLAB, GrADS, FORTRAN)  for handlin
 [github.com/pangeo-data/climpred](github.com/pangeo-data/climpred)
 <img src="images/climpred-repo.png" width="80%">
 
+<aside class="notes">
+    <ul>
+      <li>climpred is a high-level package that leverages the scientific python ecosystem to provide an interactive experience for analyzing initialized prediction systems, from file input to publication-ready visualizations.</li>
+   </ul>
+</aside>
+
 
 ## Demo
 
 
 
-## Roadmap
+## Developmental Roadmap
 
 - Continuously adding new metrics and skill scores to the package. 
 - Modularization of the bootstrapping system.
 - Addition of new reference forecasts
+  - Currently supported: `uninitialized` and `persistence`
+  - Upcoming additions: `damped persistence`, `climatology`, `random mechanism`, etc...
+
+<aside class="notes">
+    <ul>
+      <li>Development will always prioritize community users that raise issues and request features to aid in their workflow. </li>
+      <li>Modularization: Allow the user to have more control over each step in the bootstrapping process.</li>
+      <li>Reference forecasts: climpred currently only offers uninitialized and persistence reference forecasts against which to compare initialized forecast performance. We plan to add damped persistence, climatology, random mechanism, etc. in the future.</li>
+   </ul>
+</aside>
 
 
 
-
-## Thanks
+## Thanks!
 
 - Please get involved!
   - https://github.com/pangeo-data/climpred
   - https://gitter.im/climpred
+  - https://discourse.pangeo.io/
 
 <img src="images/climpred-repo.png" width="50%">
