@@ -1,3 +1,6 @@
 [submodule "revealjs"]
 	path = revealjs
 	url = https://github.com/hakimel/reveal.js
+[submodule "themes/reveal-nord-theme"]
+	path = themes/reveal-nord-theme
+	url = git@github.com:ericmjl/reveal-nord-theme.git
