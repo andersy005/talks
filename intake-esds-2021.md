@@ -100,7 +100,11 @@ We can reduce time to science with <font style="color:green";>Intake + Data cata
 
 **➜ Solution: intake-esm: https://intake-esm.readthedocs.io/**<!-- .element: class="fragment" -->  
 
-![](images/gifs/demo-time-gif.gif)<!-- .element: class="fragment" --> 
+
+![](images/gifs/demo-time-gif.gif)
+
+[Notebook: https://nbviewer.jupyter.org/github/andersy005/intake-tutorial/blob/bb53df81bd0ce26672539bc7ac109c5aea4de387/notebooks/03-intake-esm-demo.ipynb](https://nbviewer.jupyter.org/github/andersy005/intake-tutorial/blob/bb53df81bd0ce26672539bc7ac109c5aea4de387/notebooks/03-intake-esm-demo.ipynb)
+
 
 
 ## Use case 2: Observation data products
@@ -111,8 +115,10 @@ We can reduce time to science with <font style="color:green";>Intake + Data cata
 
 **➜ Solution: intake-xarray: https://intake-xarray.readthedocs.io/**<!-- .element: class="fragment" -->  
 
-![](images/gifs/demo-time-gif.gif)<!-- .element: class="fragment" --> 
 
+![](images/gifs/demo-time-gif.gif)
+
+[Notebook: https://nbviewer.jupyter.org/github/andersy005/intake-tutorial/blob/74a4fbdd6bdf41161c3e7f88d7e3e6150dac7a1c/notebooks/03-intake-esm-demo.ipynb](https://nbviewer.jupyter.org/github/andersy005/intake-tutorial/blob/bb53df81bd0ce26672539bc7ac109c5aea4de387/notebooks/04-intake-xarray-demo.ipynb)
 
 
 ## Summary
