@@ -1,3 +1,11 @@
+# Dask in HPC workshop
+
+<font size="6"> Anderson Banihirwe, Guillaume Eynard-Bontemps</font>
+
+<font size="7">May 20th 14:00 UTC</font>
+
+
+
 ### The Current State of Deploying 
 
 <img src="https://raw.githubusercontent.com/dask/dask/main/docs/source/images/dask_horizontal_white.svg" width="30%">
@@ -8,7 +16,7 @@
 
 <font size="5">Software Engineer @ The US National Center for Atmospheric Research</font>
 
-<font size="5f">Dask Distributed Summit | 2021-05-19</font>
+<font size="5f">Dask Distributed Summit | 2021-05-20</font>
 
 
 
