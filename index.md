@@ -1,6 +1,7 @@
 I've given talks at academic and software conferences. Some of these are recorded and available online:
 
-- [Intake -- Taking the pain out of data access](./intake-esds-2021.html) - ESDS WIP. May 2021
+- [The Current State of Deploying Dask on HPC systems](./deploying-dask-on-hpc-dask-summit-2021.md) - Dask Distributed Summit 2021. May 2021
+- [Intake -- Taking the pain out of data access](./intake-esds-2021.html) - ESDS WIP Discussion. May 2021
 - [Pangeo Use Case: Analyzing Initialized Climate Prediction System Datasets with climpred](./climpred-cdpw-2020.html) - NOAA's 45th Climate Diagnostics & Prediction Workshop. October 2020
 - [Zarr](./zarr-cloud-native-geospatial-2020.html) - Cloud Native Geospatial Outreach Day 2020. September 2020
 - [Intake & Intake-ESM -- Taking the pain out of data access and distribution](./intake-jupyter-meets-earth-2020.html) - Jupyter meets the Earth: EarthCube Community Meeting. July 2020
