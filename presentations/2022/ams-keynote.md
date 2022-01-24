@@ -12,9 +12,9 @@ revealOptions:
 
 <font size="7">_Anderson Banihirwe_, [@andersy005](https://github.com/andersy005)<img src="assets/assets/Github/GitHub-Mark-32px.png"></font>
 
-<font size="5">Software Engineer @ The National Center for Atmospheric Research</font>
+<font size="4.5">Software Engineer @ The National Center for Atmospheric Research</font>
 
-<font size="4">12th Symposium on Advances in Modeling and Analysis Using Python | AMS 2022 | 2022-01-19</font>
+<font size="4.5">12th Symposium on Advances in Modeling and Analysis Using Python | AMS 2022 | 2022-01-19</font>
 
 Note: test note
 
@@ -40,9 +40,9 @@ Note: Open source software powers much of the modern science even though its cre
 
 <hr>
 
-- The availability of source code and the right to modify ("free as in speech")
-- The Open source software must be free to use ("free as in beer")
-- The ethos of volunter stewardship and commmunity pervades open source software
+- The availability of source code and the right to modify ("free as in speech") <!-- .element: class="fragment" data-fragment-index="1" -->
+- The Open source software must be free to use ("free as in beer") <!-- .element: class="fragment" data-fragment-index="2" -->
+- The ethos of volunter stewardship and commmunity pervades open source software <!-- .element: class="fragment" data-fragment-index="3" -->
 
 Note: The source code must be open and available to anyone who wants to use it. You cannot charge people to use code that they are writing or have written. That means that you cannot simply take the code and charge money directly for it. Open source development could be looked at as a form of volunteering. Many developers have donated their time to either maintain or contribute to open source projects. These developers may not care about being compensated for their time—they are just happy for the experience, challenge or may just like helping others.
 
@@ -143,12 +143,12 @@ Note: As many of us know too well, starting a new projects can generate more exc
 
 #### Contributing back
 
-- Give back to the Python Scientific Community
-- Can take many forms
-  - Service contributions (pull requests reviews, bug fixes, outreach, etc.)
-  - Psychological support and encouragement (e.g. thank maintainers when you get a chance)
-  - And, of course, monetary contributions (donations) when you can afford it.
-- Cite the open source software in your academic/research work
+- Give back to the Python Scientific Community <!-- .element: class="fragment" data-fragment-index="1" -->
+- Can take many forms <!-- .element: class="fragment" data-fragment-index="2" -->
+  - Service contributions (pull requests reviews, bug fixes, outreach, etc.) <!-- .element: class="fragment" data-fragment-index="3" -->
+  - Psychological support and encouragement (e.g. thank maintainers when you get a chance) <!-- .element: class="fragment" data-fragment-index="4" -->
+  - And, of course, monetary contributions (donations) when you can afford it. <!-- .element: class="fragment" data-fragment-index="5" -->
+- Cite the open source software in your academic/research work <!-- .element: class="fragment" data-fragment-index="6" -->
 
 Note: If a research lab uses open source software, the resulting papers should cite the software the same way as any other reference.
 
@@ -158,12 +158,12 @@ Note: If a research lab uses open source software, the resulting papers should c
 
 <hr>
 
-#### Institutional Support
+#### Institutional Support (**Rocklin2019**)
 
-- Develop learning materials to help users transition to the new open source software (**Rocklin2019**)
-- Enable employees to spend time maintaining upstream projects and ensure that this time counts towards their career advancement (**Rocklin2019**)
-- Contribute code upstream either to mainline packages or new subpackages (**Rocklin2019**)
-- Co-write grant proposals with maintainers of the core project (**Rocklin2019**)
+- Develop learning materials to help users transition to the new open source software <!-- .element: class="fragment" data-fragment-index="1" -->
+- Enable employees to spend time maintaining upstream projects and ensure that this time counts towards their career advancement <!-- .element: class="fragment" data-fragment-index="2" -->
+- Contribute code upstream either to mainline packages or new subpackages <!-- .element: class="fragment" data-fragment-index="3" -->
+- Co-write grant proposals with maintainers of the core project <!-- .element: class="fragment" data-fragment-index="4" -->
 
 Note: an inordinate amount of work is required to keep software up-to-date and this is not typically “fun” work. It is what most professional developers are paid to do, but it is not what lights the fire in the heart of a developer wanting to do free after-hours work on a project. (1) You can build teaching materials like blogposts, how-to guides, and online tutorials that assist the non-early-adopters to transition more smoothly. You can provide in-person teaching at conferences and meetings common to your community. It’s likely that the open source ecosystem that you’re transitioning to already has materials that you can copy-and-modify for your domain. (2) If you are a supervisor, You should explicitly give your time within the work schedule to continue these activities. The work that they do may not be explicitly within scope for your institution, but having them active within the core of a project makes sure that the mission of your institution will be well represented in the future of the open source project. (4) If your institution provides or applies for external funding, consider writing up a grant proposal that has your institution and the OSS project collaborating for a few years. You focus on your domain and leave the OSS project maintainers to handle some of the gritty technical details that you anticipate will arise. Most of those details are hopefully things that are general purpose and that they wanted to fix anyway. It’s usually pretty easy to find a set of features that both parties would be very happy to see completed.
 
