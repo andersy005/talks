@@ -78,6 +78,8 @@ Note: These numbers paint a picture of many more users than contributors for the
 
 <!--v-->
 
+**A GitHub repository is only part of the story**
+
 > <mark>many of the tasks involved in running a sustainable project don’t involve writing any code at all</mark>, behind every successful, sustainable open source project are many people making non-code contributions that are necessary to keep everything working. — [Andrew Nesbitt](https://nesbitt.io/2017/11/10/what-does-a-sustainable-open-source-project-look-like.html)
 
 <!--v-->
@@ -165,7 +167,7 @@ Note: If a research lab uses open source software, the resulting papers should c
 - Contribute code upstream either to mainline packages or new subpackages <!-- .element: class="fragment" data-fragment-index="3" -->
 - Co-write grant proposals with maintainers of the core project <!-- .element: class="fragment" data-fragment-index="4" -->
 
-Note: an inordinate amount of work is required to keep software up-to-date and this is not typically “fun” work. It is what most professional developers are paid to do, but it is not what lights the fire in the heart of a developer wanting to do free after-hours work on a project. (1) You can build teaching materials like blogposts, how-to guides, and online tutorials that assist the non-early-adopters to transition more smoothly. You can provide in-person teaching at conferences and meetings common to your community. It’s likely that the open source ecosystem that you’re transitioning to already has materials that you can copy-and-modify for your domain. (2) If you are a supervisor, You should explicitly give your time within the work schedule to continue these activities. The work that they do may not be explicitly within scope for your institution, but having them active within the core of a project makes sure that the mission of your institution will be well represented in the future of the open source project. (4) If your institution provides or applies for external funding, consider writing up a grant proposal that has your institution and the OSS project collaborating for a few years. You focus on your domain and leave the OSS project maintainers to handle some of the gritty technical details that you anticipate will arise. Most of those details are hopefully things that are general purpose and that they wanted to fix anyway. It’s usually pretty easy to find a set of features that both parties would be very happy to see completed.
+Note: (1) You can build teaching materials like blogposts, how-to guides, and online tutorials that assist the non-early-adopters to transition more smoothly. You can provide in-person teaching at conferences and meetings common to your community. It’s likely that the open source ecosystem that you’re transitioning to already has materials that you can copy-and-modify for your domain. (2) If you are a supervisor, You should explicitly give your time within the work schedule to continue these activities. The work that they do may not be explicitly within scope for your institution, but having them active within the core of a project makes sure that the mission of your institution will be well represented in the future of the open source project. Maintaining a widely cited software project should convey academic bona fides on par with writing a widely cited paper (4) If your institution provides or applies for external funding, consider writing up a grant proposal that has your institution and the OSS project collaborating for a few years. You focus on your domain and leave the OSS project maintainers to handle some of the gritty technical details that you anticipate will arise. Most of those details are hopefully things that are general purpose and that they wanted to fix anyway. It’s usually pretty easy to find a set of features that both parties would be very happy to see completed.
 
 <!--s-->
 
@@ -175,6 +177,12 @@ Note: an inordinate amount of work is required to keep software up-to-date and t
 - Giving back is necessary for a healthy ecosystem
 
 Note: Open source is ultimately a feedback loop between maintainers and the community, where both learn from and give back to each other. Giving back takes many forms; recognition is really important. But prioritization is necessary for a healthy community. Taking care of your own needs as a maintainer is critically important.
+
+<!--s-->
+
+## Thank You!
+
+<img width="50%" src="assets/assets/misc/working-in-public.png">
 
 <!--s-->
 
