@@ -169,12 +169,26 @@ Note: If a research lab uses open source software, the resulting papers should c
 
 Note: (1) You can build teaching materials like blogposts, how-to guides, and online tutorials that assist the non-early-adopters to transition more smoothly. You can provide in-person teaching at conferences and meetings common to your community. It’s likely that the open source ecosystem that you’re transitioning to already has materials that you can copy-and-modify for your domain. (2) If you are a supervisor, You should explicitly give your time within the work schedule to continue these activities. The work that they do may not be explicitly within scope for your institution, but having them active within the core of a project makes sure that the mission of your institution will be well represented in the future of the open source project. Maintaining a widely cited software project should convey academic bona fides on par with writing a widely cited paper (4) If your institution provides or applies for external funding, consider writing up a grant proposal that has your institution and the OSS project collaborating for a few years. You focus on your domain and leave the OSS project maintainers to handle some of the gritty technical details that you anticipate will arise. Most of those details are hopefully things that are general purpose and that they wanted to fix anyway. It’s usually pretty easy to find a set of features that both parties would be very happy to see completed.
 
+<!--v-->
+
+**Learn More: Upcoming Talks**
+
+<section>
+<img width="50%" src="assets/assets/misc/ams-talk-1.png">
+<img width="50%" src="assets/assets/misc/ams-talk-2.png">
+<img width="50%" src="assets/assets/misc/ams-talk-3.png">
+<img width="50%" src="assets/assets/misc/ams-talk-4.png">
+</section>
+
 <!--s-->
 
 ## Conclusion
 
-- Open source software is ultimately a feedback loop between maintainers and the community
-- Giving back is necessary for a healthy ecosystem
+<hr>
+
+- Open source software is about people <!-- .element: class="fragment" data-fragment-index="1" -->
+- Open source software is ultimately a feedback loop between maintainers and the community <!-- .element: class="fragment" data-fragment-index="2" -->
+- Giving back is necessary for a healthy ecosystem <!-- .element: class="fragment" data-fragment-index="3" -->
 
 Note: Open source is ultimately a feedback loop between maintainers and the community, where both learn from and give back to each other. Giving back takes many forms; recognition is really important. But prioritization is necessary for a healthy community. Taking care of your own needs as a maintainer is critically important.
 
