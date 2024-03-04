@@ -3,7 +3,7 @@ title: AMS 2022 Keynote
 separator: <!--s-->
 verticalSeparator: <!--v-->
 revealOptions:
-  transition: 'fade'
+  transition: "fade"
 ---
 
 ## Building Tools for the Scientific Python Community
