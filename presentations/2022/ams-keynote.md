@@ -107,6 +107,7 @@ Note: These numbers paint a picture of many more users than contributors for the
 - Open source maintainance looks good on a resume (**Malone2020**)
 - Open source maintainance can provide the satisfaction of having an impact in the community (**Malone2020**)
 - Open source software provides talent-recruiting opportunities for institutions (**Malone2020**)
+
 <!--v-->
 
 #### The Experience of Maintaining Open Source Software
